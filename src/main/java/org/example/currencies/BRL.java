@@ -17,4 +17,17 @@ public class BRL {
     public double value;
     @JsonProperty("Previous")
     public double previous;
+
+    @Override
+    public String toString() {
+        return "\n\nBRL{" +
+                "\niD='" + iD + '\'' +
+                ",\n numCode='" + numCode + '\'' +
+                ",\n charCode='" + charCode + '\'' +
+                ",\n nominal=" + nominal +
+                ",\n name='" + name + '\'' +
+                ",\n value=" + value +
+                ",\n previous=" + previous +
+                '}';
+    }
 }

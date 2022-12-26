@@ -25,14 +25,14 @@ public class DataParser {
 
     private List<Info> advancedParse(HttpResponse<String> response) throws JsonProcessingException {
         JsonMapper jsonMapper = new JsonMapper();
-        Info[] infos = jsonMapper.readValue(response.body(), Info[].class);
+        Info infos = jsonMapper.readValue(response.body(), Info.class);
         return List.of(infos);
     }
 
     public void printListInfo() throws IOException, InterruptedException {
         List<Info> infos = advancedParse(getData());
         for (Info info : infos) {
-            System.out.println(info);
+            System.out.println(info.toString());
         }
     }
 

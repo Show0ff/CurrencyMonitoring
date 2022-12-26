@@ -15,4 +15,15 @@ public class Info {
     public Date timestamp;
     @JsonProperty("Valute")
     public Valute valute;
+
+    @Override
+    public String toString() {
+        return "Info{\n" +
+                "date=" + date +
+                ",\n previousDate=" + previousDate +
+                ",\n previousURL='" + previousURL + '\'' +
+                ",\n timestamp=" + timestamp +
+                ",\n valute=" + valute +
+                '}';
+    }
 }

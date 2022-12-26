@@ -17,4 +17,17 @@ public class AUD {
     public double value;
     @JsonProperty("Previous")
     public double previous;
+
+    @Override
+    public String toString() {
+        return "\n\n AUD{" +
+                "iD='" + iD + '\'' +
+                ",\n numCode='" + numCode + '\'' +
+                ",\n charCode='" + charCode + '\'' +
+                ",\n nominal=" + nominal +
+                ",\n name='" + name + '\'' +
+                ",\n value=" + value +
+                ",\n previous=" + previous +
+                '}';
+    }
 }
